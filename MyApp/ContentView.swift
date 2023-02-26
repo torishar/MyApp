@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectionTab: String = "home"
+    @State var selectionTab: String = "app"
     
     var views = ["home", "app", "profile"]
     
@@ -23,10 +23,11 @@ struct ContentView: View {
                 HomeView()
                     .tag("home")
                     .background(Color("lightGray"))
-                Text("2")
+                AppView()
                     .tag("app")
-                Text("3")
-                    .tag("profile")
+                    .background(Color("lightGray"))
+                ProfileView()                    .tag("profile")
+                    .background(Color("lightGray"))
             }
             
             HStack {
@@ -45,7 +46,6 @@ struct ContentView: View {
             
         }
         .frame(width: .infinity, height: .infinity)
-        //.ignoresSafeArea()
     }
 }
 

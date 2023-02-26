@@ -9,18 +9,22 @@
 /* Begin PBXBuildFile section */
 		61C8D25C29AA0F1000766171 /* MyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D25B29AA0F1000766171 /* MyAppApp.swift */; };
 		61C8D25E29AA0F1000766171 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D25D29AA0F1000766171 /* ContentView.swift */; };
-		61C8D26029AA0F1200766171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8D25F29AA0F1200766171 /* Assets.xcassets */; };
 		61C8D26329AA0F1200766171 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8D26229AA0F1200766171 /* Preview Assets.xcassets */; };
 		61C8D26A29AA1A2E00766171 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D26929AA1A2E00766171 /* HomeView.swift */; };
+		61C8D27129AB646700766171 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27029AB646700766171 /* AppView.swift */; };
+		61C8D27329AB64E000766171 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27229AB64E000766171 /* ProfileView.swift */; };
+		61C8D27529AB959500766171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8D27429AB959500766171 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61C8D25829AA0F1000766171 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C8D25B29AA0F1000766171 /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		61C8D25D29AA0F1000766171 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		61C8D25F29AA0F1200766171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C8D26229AA0F1200766171 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61C8D26929AA1A2E00766171 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		61C8D27029AB646700766171 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		61C8D27229AB64E000766171 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		61C8D27429AB959500766171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 				61C8D25B29AA0F1000766171 /* MyAppApp.swift */,
 				61C8D25D29AA0F1000766171 /* ContentView.swift */,
 				61C8D26929AA1A2E00766171 /* HomeView.swift */,
-				61C8D25F29AA0F1200766171 /* Assets.xcassets */,
+				61C8D27029AB646700766171 /* AppView.swift */,
+				61C8D27229AB64E000766171 /* ProfileView.swift */,
+				61C8D27429AB959500766171 /* Assets.xcassets */,
 				61C8D26129AA0F1200766171 /* Preview Content */,
 			);
 			path = MyApp;
@@ -128,8 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C8D27529AB959500766171 /* Assets.xcassets in Resources */,
 				61C8D26329AA0F1200766171 /* Preview Assets.xcassets in Resources */,
-				61C8D26029AA0F1200766171 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C8D27129AB646700766171 /* AppView.swift in Sources */,
 				61C8D26A29AA1A2E00766171 /* HomeView.swift in Sources */,
+				61C8D27329AB64E000766171 /* ProfileView.swift in Sources */,
 				61C8D25E29AA0F1000766171 /* ContentView.swift in Sources */,
 				61C8D25C29AA0F1000766171 /* MyAppApp.swift in Sources */,
 			);
