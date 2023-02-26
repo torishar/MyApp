@@ -8,6 +8,24 @@
 import SwiftUI
 
 struct AppView: View {
+    
+    let favorites: [Favorites] = [
+            Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть"),
+            Favorites(icon: "appIcon", nameApp: "Название 2", descriptoinApp: "Описание 2", textBtn: "Загрузить"),
+            Favorites(icon: "appIcon", nameApp: "Название 3", descriptoinApp: "Описание 3", textBtn: "Открыть"),
+            Favorites(icon: "appIcon", nameApp: "Название 4", descriptoinApp: "Описание 4", textBtn: "Открыть"),
+            Favorites(icon: "appIcon", nameApp: "Название 5", descriptoinApp: "Описание 5", textBtn: "Загрузить"),
+            Favorites(icon: "appIcon", nameApp: "Название 6", descriptoinApp: "Описание 6", textBtn: "Загрузить"),
+            Favorites(icon: "appIcon", nameApp: "Название 7", descriptoinApp: "Описание 7", textBtn: "Загрузить"),
+            Favorites(icon: "appIcon", nameApp: "Название 8", descriptoinApp: "Описание 8", textBtn: "Загрузить")
+        ]
+    
+    let rows = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         ScrollView {
             
@@ -38,6 +56,7 @@ struct AppView: View {
                 }
                 
                 Divider()
+                    .padding(16)
                 
     //MARK: -- Sections
                 VStack {
@@ -56,19 +75,29 @@ struct AppView: View {
                     }
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack (alignment: .top) {
-                            VStack {
-                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
-                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Загрузить")
-                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
+                        LazyHGrid(rows: rows, spacing: 20) {
+                            ForEach(favorites, id: \.self) { favorite in
+                                Favorites(icon: favorite.icon,
+                                          nameApp: favorite.nameApp,
+                                          descriptoinApp: favorite.descriptoinApp,
+                                          textBtn: favorite.textBtn)
                             }
-                            VStack {
-                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
-                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Загрузить")
-                                
-                            }
-                            
+                            .padding(.vertical,80)
                         }
+                        
+//                        HStack (alignment: .top) {
+//                            VStack {
+//                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
+//                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Загрузить")
+//                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
+//                            }
+//                            VStack {
+//                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Открыть")
+//                                Favorites(icon: "appIcon", nameApp: "Название 1", descriptoinApp: "Описание 1", textBtn: "Загрузить")
+//
+//                            }
+//
+//                        }
                     }
                     
                 }
@@ -111,26 +140,26 @@ struct Advertising: View {
                     .resizable()
                     .frame(width: UIScreen.main.bounds.width * 0.85, height: 200)
                     .scaledToFill()
-                HStack {
-                    HStack (alignment: .top) {
-                        Image(icon)
-                            .resizable()
-                            .frame(width: 44, height: 44)
-                            .cornerRadius(10)
-                            .offset(x: 10, y: -10)
-                        VStack {
-                            Text(fullNameApp)
-                                .font(.system(size: 16, weight: .bold))
-                            Text(descriptionApp)
-                                .font(.system(size: 16, weight: .medium))
-                        }
+                HStack(alignment: .center) {
+                    Image(icon)
+                        .resizable()
+                        .frame(width: 44, height: 44)
+                        .cornerRadius(10)
+                    VStack {
+                        Text(fullNameApp)
+                            .font(.system(size: 16, weight: .bold))
+                        Text(descriptionApp)
+                            .font(.system(size: 16, weight: .medium))
                     }
+                    .padding(10)
                     
                     Spacer()
                     
                     Image(systemName: "icloud.and.arrow.down")
                         .bold()
+                        .padding(.trailing, 10)
                 }
+                .padding(10)
                 .background(Color.gray.opacity(0.6)
                     .blur(radius: 20))
                 .foregroundColor(.white)
@@ -139,9 +168,7 @@ struct Advertising: View {
     }
 }
 
-
-
-struct Favorites: View {
+struct Favorites: View, Hashable {
     
     var icon: String
     var nameApp: String
@@ -149,22 +176,22 @@ struct Favorites: View {
     var textBtn: String
     
     var body: some View {
-        HStack {
-            Image(icon)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 48, height: 48)
+        VStack {
             HStack {
-                VStack (alignment: .leading) {
+                Image(icon)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 58, height: 58)
+                
+                VStack(alignment: .center) {
                     Text(nameApp)
                         .font(.system(size: 20, weight: .regular))
                     Text(descriptoinApp)
                         .font(.system(size: 18))
                         .foregroundColor(.gray)
-                    Divider()
                 }
-
-               // Spacer()
+                
+                Spacer()
                 
                 Button {
                     //
@@ -175,10 +202,13 @@ struct Favorites: View {
                 .padding(10)
                 .background(Color.gray.opacity(0.27))
                 .clipShape(Capsule())
-
+                
             }
+            .frame(width: UIScreen.main.bounds.width * 0.85, alignment: .center)
+        
+            Divider()
+                .padding(.leading, 68)
         }
-        .frame(width: UIScreen.main.bounds.width * 0.85)
     }
 }
 

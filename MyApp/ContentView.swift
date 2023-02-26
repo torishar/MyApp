@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectionTab: String = "app"
+    @State var selectionTab: String = "home"
     
     var views = ["home", "app", "profile"]
     
