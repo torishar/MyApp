@@ -55,9 +55,9 @@
 			children = (
 				61C8D25B29AA0F1000766171 /* MyAppApp.swift */,
 				61C8D25D29AA0F1000766171 /* ContentView.swift */,
+				61C8D26929AA1A2E00766171 /* HomeView.swift */,
 				61C8D25F29AA0F1200766171 /* Assets.xcassets */,
 				61C8D26129AA0F1200766171 /* Preview Content */,
-				61C8D26929AA1A2E00766171 /* HomeView.swift */,
 			);
 			path = MyApp;
 			sourceTree = "<group>";
