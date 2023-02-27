@@ -14,6 +14,12 @@
 		61C8D27129AB646700766171 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27029AB646700766171 /* AppView.swift */; };
 		61C8D27329AB64E000766171 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27229AB64E000766171 /* ProfileView.swift */; };
 		61C8D27529AB959500766171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8D27429AB959500766171 /* Assets.xcassets */; };
+		61C8D27929AC1B1100766171 /* PhotoUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27829AC1B1100766171 /* PhotoUsersView.swift */; };
+		61C8D27C29AC1B8D00766171 /* ScrollCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27B29AC1B8D00766171 /* ScrollCardView.swift */; };
+		61C8D27F29AC1BC900766171 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D27E29AC1BC900766171 /* CardsView.swift */; };
+		61C8D28229AC1C1600766171 /* AdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D28129AC1C1600766171 /* AdvertisingView.swift */; };
+		61C8D28429AC1C2500766171 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D28329AC1C2500766171 /* FavoritesView.swift */; };
+		61C8D28729AC1F2A00766171 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D28629AC1F2A00766171 /* CustomTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		61C8D27029AB646700766171 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		61C8D27229AB64E000766171 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		61C8D27429AB959500766171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61C8D27829AC1B1100766171 /* PhotoUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUsersView.swift; sourceTree = "<group>"; };
+		61C8D27B29AC1B8D00766171 /* ScrollCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCardView.swift; sourceTree = "<group>"; };
+		61C8D27E29AC1BC900766171 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		61C8D28129AC1C1600766171 /* AdvertisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingView.swift; sourceTree = "<group>"; };
+		61C8D28329AC1C2500766171 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		61C8D28629AC1F2A00766171 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +69,11 @@
 		61C8D25A29AA0F1000766171 /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				61C8D28529AC1F0900766171 /* TabView */,
+				61C8D27A29AC1B7100766171 /* HomeViews */,
+				61C8D28029AC1BEE00766171 /* AppViews */,
+				61C8D28829AC1F5B00766171 /* ProfileViews */,
 				61C8D25B29AA0F1000766171 /* MyAppApp.swift */,
-				61C8D25D29AA0F1000766171 /* ContentView.swift */,
-				61C8D26929AA1A2E00766171 /* HomeView.swift */,
-				61C8D27029AB646700766171 /* AppView.swift */,
-				61C8D27229AB64E000766171 /* ProfileView.swift */,
 				61C8D27429AB959500766171 /* Assets.xcassets */,
 				61C8D26129AA0F1200766171 /* Preview Content */,
 			);
@@ -74,6 +86,44 @@
 				61C8D26229AA0F1200766171 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61C8D27A29AC1B7100766171 /* HomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				61C8D26929AA1A2E00766171 /* HomeView.swift */,
+				61C8D27829AC1B1100766171 /* PhotoUsersView.swift */,
+				61C8D27B29AC1B8D00766171 /* ScrollCardView.swift */,
+				61C8D27E29AC1BC900766171 /* CardsView.swift */,
+			);
+			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		61C8D28029AC1BEE00766171 /* AppViews */ = {
+			isa = PBXGroup;
+			children = (
+				61C8D27029AB646700766171 /* AppView.swift */,
+				61C8D28129AC1C1600766171 /* AdvertisingView.swift */,
+				61C8D28329AC1C2500766171 /* FavoritesView.swift */,
+			);
+			path = AppViews;
+			sourceTree = "<group>";
+		};
+		61C8D28529AC1F0900766171 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				61C8D25D29AA0F1000766171 /* ContentView.swift */,
+				61C8D28629AC1F2A00766171 /* CustomTabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		61C8D28829AC1F5B00766171 /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				61C8D27229AB64E000766171 /* ProfileView.swift */,
+			);
+			path = ProfileViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +196,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C8D28429AC1C2500766171 /* FavoritesView.swift in Sources */,
+				61C8D27C29AC1B8D00766171 /* ScrollCardView.swift in Sources */,
 				61C8D27129AB646700766171 /* AppView.swift in Sources */,
+				61C8D27F29AC1BC900766171 /* CardsView.swift in Sources */,
 				61C8D26A29AA1A2E00766171 /* HomeView.swift in Sources */,
+				61C8D27929AC1B1100766171 /* PhotoUsersView.swift in Sources */,
 				61C8D27329AB64E000766171 /* ProfileView.swift in Sources */,
+				61C8D28729AC1F2A00766171 /* CustomTabView.swift in Sources */,
+				61C8D28229AC1C1600766171 /* AdvertisingView.swift in Sources */,
 				61C8D25E29AA0F1000766171 /* ContentView.swift in Sources */,
 				61C8D25C29AA0F1000766171 /* MyAppApp.swift in Sources */,
 			);

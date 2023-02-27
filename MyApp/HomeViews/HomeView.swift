@@ -28,8 +28,8 @@ struct HomeView: View {
 //MARK: -- Scroll cards
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 13) {
-                        ScrollCard(image: "flowers", text: "Заголовок 1")
-                        ScrollCard(image: "flower", text: "Заголовок 2")
+                        ScrollCardView(image: "flowers", text: "Заголовок 1")
+                        ScrollCardView(image: "flower", text: "Заголовок 2")
                     }
                     .padding(.horizontal, 15)
                 }
@@ -46,10 +46,10 @@ struct HomeView: View {
                     
                     HStack(spacing: 18) {
 
-                        PhotoUsers(photo: "photo1")
-                        PhotoUsers(photo: "photo2")
-                        PhotoUsers(photo: "photo3")
-                        PhotoUsers(photo: "photo4")
+                        PhotoUsersView(photo: "photo1")
+                        PhotoUsersView(photo: "photo2")
+                        PhotoUsersView(photo: "photo3")
+                        PhotoUsersView(photo: "photo4")
                         
                         Button {
                             //
@@ -84,76 +84,15 @@ struct HomeView: View {
                 .padding(.horizontal, 15)
 //MARK: -- Cards
                 HStack {
-                    Cards(icons: "mountains", titleCards: "Элемент 1", descriptionCards: "lorem text", colorCards: "blue")
-                    Cards(icons: "house", titleCards: "Элемент 2", descriptionCards: "lorem text", colorCards: "yellow")
-                    Cards(icons: "star", titleCards: "Элемент 3", descriptionCards: "lorem text", colorCards: "red")
+                    CardsView(icons: "mountains", titleCards: "Элемент 1", descriptionCards: "lorem text", colorCards: "blue")
+                    CardsView(icons: "house", titleCards: "Элемент 2", descriptionCards: "lorem text", colorCards: "yellow")
+                    CardsView(icons: "star", titleCards: "Элемент 3", descriptionCards: "lorem text", colorCards: "red")
                 }
                 .padding(.horizontal, 15)
             }
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
-struct PhotoUsers: View {
-    var photo: String
-    var body: some View {
-        HStack {
-            Image(photo)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 44, height: 44)
-                .clipShape(Circle())
-                .shadow(color: .black.opacity(0.3), radius: 4, x: 4, y: 4)
-        }
-    }
-}
-
-struct ScrollCard: View {
-    var image: String
-    var text: String
-    var body: some View {
-        ZStack(alignment: Alignment(horizontal: .leading, vertical: .bottom)) {
-            Image(image)
-                .resizable()
-                .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width * 0.55, height: 105)
-            Text(text)
-                .font(.system(size: 12, weight: .black))
-                .foregroundColor(.white)
-                .offset(x: 20, y: -20)
-            
-        }
-        .cornerRadius(20)
-    }
-}
-
-struct Cards: View {
-    
-    var icons: String
-    var titleCards: String
-    var descriptionCards: String
-    var colorCards: String
-    var body: some View {
-        VStack(alignment: .leading) {
-            Image(icons)
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding(.top, 30)
-            VStack(alignment: .leading) {
-                Text(titleCards)
-                    .font(.system(size: 12, weight: .bold))
-                Text(descriptionCards)
-                    .font(.system(size: 12, weight: .medium))
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .padding(.horizontal, 13)
-        .padding(.vertical, 20)
-        .background(Color(colorCards))
-        .foregroundColor(.white)
-        .cornerRadius(20)
     }
 }
 

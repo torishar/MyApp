@@ -26,7 +26,8 @@ struct ContentView: View {
                 AppView()
                     .tag("app")
                     .background(Color("lightGray"))
-                ProfileView()                    .tag("profile")
+                ProfileView()
+                    .tag("profile")
                     .background(Color("lightGray"))
             }
             
@@ -49,21 +50,6 @@ struct ContentView: View {
     }
 }
 
-struct CustomTabView: View {
-    @Binding var currentTab: String
-    var image: String
-    var body: some View {
-        Button {
-            currentTab = image
-        } label: {
-            Image(image)
-                .resizable()
-                .frame(width: 21, height: 21)
-                .opacity(currentTab == image ? 1 : 0.3)
-        }
-
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
