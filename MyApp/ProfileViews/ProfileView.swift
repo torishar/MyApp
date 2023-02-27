@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false) {
             VStack(spacing: 40) {
                 VStack {
                     HStack(alignment: .top) {
@@ -25,65 +25,17 @@ struct ProfileView: View {
                         Image(systemName: "gearshape.fill")
                     }
                     HStack(alignment: .bottom, spacing: 33) {
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 74)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("pink"))
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 108)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("yellowLight"))
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 58)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("blueDark"))
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 87)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("green"))
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 103)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("purple"))
-                        
-                        VStack {
-                            Rectangle()
-                                .frame(width: 20, height: 84)
-                                .clipShape(Capsule())
-                            Circle()
-                                .frame(width: 20)
-                        }
-                        .foregroundColor(Color("violet"))
+                        DiagramView(color: "pink", rectangleHeight: 74, circleHWidth: 20)
+                        DiagramView(color: "yellowLight", rectangleHeight: 108, circleHWidth: 20)
+                        DiagramView(color: "blueDark", rectangleHeight: 58, circleHWidth: 20)
+                        DiagramView(color: "green", rectangleHeight: 87, circleHWidth: 20)
+                        DiagramView(color: "purple", rectangleHeight: 103, circleHWidth: 20)
+                        DiagramView(color: "violet", rectangleHeight: 84, circleHWidth: 20)
                     }
                 }
                 .padding(30)
                 .background(Color("gray"))
                 .cornerRadius(20)
-                .padding(.horizontal, 15)
                 
                 
                 VStack(alignment: .leading) {
@@ -96,24 +48,10 @@ struct ProfileView: View {
                                     .font(.system(size: 18, weight: .light))
                             }
                             .padding(.horizontal, 30)
-                            HStack {
-                                Image("user1")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                                    .clipShape(Circle())
-                                Spacer()
-                                Image("user2")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                                    .clipShape(Circle())
-                                Spacer()
-                                Image("user3")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 100, height: 100)
-                                    .clipShape(Circle())
+                            HStack(spacing: 28) {
+                                UsersView(imageUsers: "user1")
+                                UsersView(imageUsers: "user2")
+                                UsersView(imageUsers: "user3")
                             }
                         }
                         
@@ -131,7 +69,6 @@ struct ProfileView: View {
                     }
                                         
                 }
-                .padding(.horizontal, 15)
                 
                 
                 VStack(alignment: .leading) {
@@ -170,13 +107,12 @@ struct ProfileView: View {
                         }
                         
                     }
-                    .padding(.horizontal, 30)
                 }
-                .padding(.horizontal, 15)
             }
-            .padding(.vertical, 60)
             
         }
+        .padding(.horizontal, 15)
+        .padding(.vertical, 60)
     }
 }
 

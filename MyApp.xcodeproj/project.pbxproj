@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6188158329AD549900209762 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6188158229AD549900209762 /* UsersView.swift */; };
+		6188158529AD560E00209762 /* DiagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6188158429AD560E00209762 /* DiagramView.swift */; };
 		61C8D25C29AA0F1000766171 /* MyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D25B29AA0F1000766171 /* MyAppApp.swift */; };
 		61C8D25E29AA0F1000766171 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8D25D29AA0F1000766171 /* ContentView.swift */; };
 		61C8D26329AA0F1200766171 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C8D26229AA0F1200766171 /* Preview Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6188158229AD549900209762 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		6188158429AD560E00209762 /* DiagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramView.swift; sourceTree = "<group>"; };
 		61C8D25829AA0F1000766171 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C8D25B29AA0F1000766171 /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		61C8D25D29AA0F1000766171 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				61C8D27229AB64E000766171 /* ProfileView.swift */,
+				6188158229AD549900209762 /* UsersView.swift */,
+				6188158429AD560E00209762 /* DiagramView.swift */,
 			);
 			path = ProfileViews;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 				61C8D28229AC1C1600766171 /* AdvertisingView.swift in Sources */,
 				61C8D25E29AA0F1000766171 /* ContentView.swift in Sources */,
 				61C8D25C29AA0F1000766171 /* MyAppApp.swift in Sources */,
+				6188158329AD549900209762 /* UsersView.swift in Sources */,
+				6188158529AD560E00209762 /* DiagramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
