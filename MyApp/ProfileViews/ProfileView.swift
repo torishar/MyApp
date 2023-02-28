@@ -22,7 +22,13 @@ struct ProfileView: View {
                         
                         Spacer()
                         
-                        Image(systemName: "gearshape.fill")
+                        Button {
+                            //
+                        } label: {
+                            Image(systemName: "gearshape.fill")
+                        }
+                        .foregroundColor(.black)
+                        
                     }
                     HStack(alignment: .bottom, spacing: 33) {
                         DiagramView(color: "pink", rectangleHeight: 74, circleHWidth: 20)
@@ -86,7 +92,14 @@ struct ProfileView: View {
                                 .font(.system(size: 14, weight: .regular))
                         }
                         Spacer()
-                        Image(systemName: "ellipsis")
+                        
+                        Button {
+                            //
+                        } label: {
+                            Image(systemName: "ellipsis")
+                        }
+                        .foregroundColor(.black)
+
                     }
                     .padding(.horizontal, 30)
                     
@@ -105,14 +118,19 @@ struct ProfileView: View {
                             Image(systemName: "ellipsis.message")
                             Text("2.3k")
                         }
-                        
                     }
+                    .padding(.horizontal, 30)
                 }
             }
             
+            .padding(.horizontal, 15)
+            .padding(.bottom, 70)
+//            .background(.blue)
         }
-        .padding(.horizontal, 15)
-        .padding(.vertical, 60)
+//        //.padding(.bottom, 60)
+//        .padding(.horizontal, 15)
+//        .background(.red)
+
     }
 }
 
